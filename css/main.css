@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box; }
+
 body {
   background-color: #f8f8f8;
   max-width: 1400px;
@@ -13,7 +16,8 @@ h3 {
   font-family: "Source Sans Pro", sans-serif;
   letter-spacing: 1px;
   width: 90%;
-  text-align: center; }
+  text-align: center;
+  font-weight: 400; }
 
 .employee-cards {
   display: flex;
@@ -25,21 +29,47 @@ h3 {
   flex-flow: row wrap;
   justify-content: space-between;
   border: 1px solid lightgray;
-  border-radius: 5px;
+  border-radius: 8px;
   padding: 20px;
   margin: 10px;
   width: 300px;
   background-color: #fff; }
 
+.employee-preview-information {
+  display: flex;
+  flex-flow: row wrap;
+  width: 70%;
+  font-family: "Source Sans Pro", sans-serif;
+  flex-direction: column; }
+
 .thumbnail {
-  border-radius: 50%; }
+  border-radius: 50%;
+  width: 75px;
+  height: 75px; }
+
+.full-name {
+  font-size: 20px; }
+
+.email,
+.city {
+  font-size: 14px;
+  font-weight: 300;
+  margin: 5px 0px; }
 
 @media (min-width: 760px) {
   .card {
-    width: 350px; }
+    width: 370px; }
 
   h3 {
     width: 80%;
-    text-align: left; } }
+    text-align: left; }
+
+  .thumbnail {
+    width: 100px;
+    height: 100px; }
+
+  .employee-preview-information {
+    width: 65%;
+    margin-left: 5px; } }
 
 /*# sourceMappingURL=main.css.map */
