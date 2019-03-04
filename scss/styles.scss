@@ -1,0 +1,46 @@
+body {
+    background-color: $background-color;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.main {
+    width: 100%;
+    margin: 0 auto;
+}
+h3 {
+    color: $primary-text-color;
+    text-transform: uppercase;
+    font-family: $primary-text-font;
+    letter-spacing: 1px;
+    width: 90%;
+    text-align: center;
+}
+.employee-cards {
+    display: flex; 
+    flex-flow: row wrap;
+    justify-content: center;
+
+}
+.card {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    background-color: $card-background-color;
+}
+.thumbnail {
+    border-radius: 50%;
+}
+@media (min-width: 760px) {
+    .card {
+        width: 350px;
+    }
+    h3 {
+        width: 80%;
+        text-align: left;
+    }
+}
