@@ -2,3 +2,8 @@
     display: flex; 
     flex-flow: row wrap;
 }
+@mixin secondary-text {
+    font-size: 14px;
+    font-weight: 300;
+    font-family: $primary-text-font;
+}

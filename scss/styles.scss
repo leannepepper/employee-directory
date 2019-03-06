@@ -30,8 +30,11 @@ h3 {
     border-radius: 8px;
     padding: 20px;
     margin: 10px;
-    width: 300px; 
+    width: 350px; 
     background-color: $card-background-color;
+&:hover {
+    box-shadow: 2px 2px 4px 3px rgba(0, 0, 0, 0.2); 
+}
 }
 .employee-preview-information {
     @include flex; 
@@ -49,9 +52,58 @@ h3 {
 }
 .email,
 .city {
-    font-size: 14px;
-    font-weight: 300;
-    margin: 5px 0px;
+    @include secondary-text;
+    margin: 5px;
+}
+
+// modal styles 
+.modal-div {
+    max-width: 1400px;
+}
+.modal {
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+.modal-information {
+    background-color: $card-background-color;
+    width: 60%;
+    height: auto;
+    margin: 10% auto;
+    padding: 15px;
+    display: flex; 
+    flex-flow: column;
+    border-radius: 10px;
+}
+.modal-close {
+    align-self: flex-end;
+}
+.modal-item {
+    align-self: center;
+    // width: 90%;
+    text-align: center;
+    @include secondary-text;
+}
+.employee-modal-information {
+    padding: 20px 0px;
+}
+.extra {
+    border-top: 1px solid lightgray;
+}
+.phone, 
+.address,
+.dob {
+    margin-top: 5px;
+}
+.modal-close {
+    border: none;
+    font-size: 18px;
 }
 @media (min-width: 760px) {
     .card {
@@ -68,5 +120,9 @@ h3 {
     .employee-preview-information {
         width: 65%;
         margin-left: 5px;
+    }
+    .modal-information {
+         width: 30%;
+        
     }
 }
