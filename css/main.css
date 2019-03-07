@@ -88,7 +88,8 @@ h3 {
   padding: 15px;
   display: flex;
   flex-flow: column;
-  border-radius: 10px; }
+  border-radius: 10px;
+  position: relative; }
 
 .modal-close {
   align-self: flex-end; }
@@ -114,6 +115,26 @@ h3 {
 .modal-close {
   border: none;
   font-size: 18px; }
+
+.previous-button,
+.next-button {
+  border: none;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 50px;
+  color: lightgray;
+  position: absolute;
+  background-color: transparent; }
+  .previous-button:hover,
+  .next-button:hover {
+    color: #413f3f; }
+
+.next-button {
+  top: 50%;
+  right: -20%; }
+
+.previous-button {
+  top: 50%;
+  left: -20%; }
 
 @media (min-width: 760px) {
   .card {
